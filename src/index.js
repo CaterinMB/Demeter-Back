@@ -1,12 +1,11 @@
 import app from './app.js'
 import { sequelize } from './db/dataBase.js'
-import { port } from './config.js'
 
 async function main() {
     try{
         await sequelize.sync({force: false})
-        app.listen(port);
-        console.log('Server on port ', port);
+        app.listen(5080);
+        console.log('Server on port ', 5080);
     } catch (error) {
         console.error('Unable to connect to the database:', error);
     }
