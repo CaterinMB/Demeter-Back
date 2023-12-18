@@ -97,12 +97,6 @@ export const updateUser = async (req, res) => {
         const { id } = req.params
 
         const { Type_Document, Document, LastName_User, Name_User, Email, Role_ID } = req.body
-        
-        const typesDocument = ['CC', 'CE', 'PB'];
-        
-        if (!typesDocument.includes(Type_Document)) {
-            return res.status(400).json({ mensaje: 'Tipo de documento no valido (CC, CE ó PB).' });
-        }
 
         const updateUser = await user.findByPk(id)
 

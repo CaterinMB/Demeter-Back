@@ -96,12 +96,6 @@ export const updateWaiter = async (req, res) => {
     try {
         const { Type_Document, Document, Name_User, LastName_User, Restaurant } = req.body;
 
-        const typesDocument = ['CC', 'CE', 'PB'];
-
-        if (!typesDocument.includes(Type_Document)) {
-            return res.status(400).json({ mensaje: 'Tipo de documento no valido (CC, CE ó PB)' });
-        }
-
         const updateWaiter = await user.findByPk(id)
 
         updateWaiter.Type_Document = Type_Document

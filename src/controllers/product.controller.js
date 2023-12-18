@@ -219,9 +219,9 @@ export const createDetailP = async (req, res) => {
 };
 
 export const deleteDetailProduct = async (req, res) => {
-    try {
-        const { id } = req.params
+    const { id } = req.params
 
+    try {
         await productDetail.destroy({
             where: { ID_ProductDetail: id, }
         });
