@@ -23,7 +23,8 @@ import moduleRoutes from './routes/module.routes.js';
 const app = express();
 
 app.use(cors({
-    origin: 'https://demeter-front-production-3b64.up.railway.app/',
+    // origin: 'https://demeter-front-production-3b64.up.railway.app/',
+    origin: true,
     methods: 'GET,HEAD,POST,PUT,PATCH,DELETE',
     credentials: true,
     optionsSuccessStatus: 204,
