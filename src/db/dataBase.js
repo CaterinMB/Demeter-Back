@@ -7,7 +7,6 @@ const dbConfig = {
   password: process.env.DB_Password,
   database: process.env.DB_Name,
   dialect: 'mysql' 
-  
 }
 
 export const sequelize = new Sequelize(
