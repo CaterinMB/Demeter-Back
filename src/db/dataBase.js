@@ -5,7 +5,7 @@ export const sequelize = new Sequelize(
   'root',
   '',
   {
-    host: '10.10.10.202',
-    dialect: 'mysql' 
+    host: 'localhost',
+    dialect: 'mysql'
   }
 );
