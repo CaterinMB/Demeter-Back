@@ -111,7 +111,7 @@ export const forgotPassword = async (req, res) => {
         }
 
         const resetToken = jwt.sign({ id: foundUser.ID_User }, TOKEN_SECRET, { expiresIn: '1h' });
-        const resetUrl = ` http://localhost:5173/newPassword/${foundUser.ID_User}`;
+        const resetUrl = ` http://10.10.10.202:5173/newPassword/${foundUser.ID_User}`;
 
         // Opciones del correo
         const mailOptions = {
