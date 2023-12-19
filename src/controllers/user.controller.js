@@ -96,7 +96,7 @@ export const updateUser = async (req, res) => {
     try {
         const { id } = req.params
 
-        const { Type_Document, Document, LastName_User, Name_User, Email, Role_ID } = req.body
+        const { Type_Document, Document, LastName_User, Name_User, Email } = req.body
 
         const updateUser = await user.findByPk(id)
 
@@ -104,7 +104,6 @@ export const updateUser = async (req, res) => {
         updateUser.Document = Document
         updateUser.Name_User = Name_User
         updateUser.LastName_User = LastName_User
-        updateUser.Role_ID = Role_ID
         updateUser.Email = Email
 
         await updateUser.save();

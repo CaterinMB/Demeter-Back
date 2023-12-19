@@ -91,9 +91,9 @@ export const duplicateWaiter = async (req, res, next) => {
 };
 
 export const updateWaiter = async (req, res) => {
-    const { id } = req.params
 
     try {
+        const { id } = req.params
         const { Type_Document, Document, Name_User, LastName_User, Restaurant } = req.body;
 
         const updateWaiter = await user.findByPk(id)
